@@ -1,10 +1,10 @@
 # Social-Media-Site
 <p float="left">
- <img src="./example_images/InfoPage.PNG" width="275" alt='Landing Page Preview' >
- <img src="./example_images/homePage.PNG" width="275" alt='Home Page Preview' >
+ <img src="./example_images/InfoPage.PNG" width="250" alt='Landing Page Preview' >
+ <img src="./example_images/homePage.PNG" width="250" alt='Home Page Preview' >
 <!--  <img src="./example_images/homePageAllUsers.PNG" width="275" alt='Display All Users Preview' > -->
 <!--   <img src="./example_images/ProfilePage.PNG" width="275" alt='User Profile Page Preview' > -->
-  <img src="./example_images/Messages.PNG" width="275" alt='Messages Page Preview' >
+  <img src="./example_images/Messages.PNG" width="250" alt='Messages Page Preview' >
 </p>
 
 
