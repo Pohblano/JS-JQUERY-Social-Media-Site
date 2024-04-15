@@ -1,4 +1,4 @@
-Social-Media-Site
+# Social-Media-Site
 <p float="left">
  <img src="./example_images/InfoPage.PNG" width="300" alt='Landing Page Preview' >
  <img src="./example_images/homePage.PNG" width="300" alt='Home Page Preview' >
@@ -19,22 +19,22 @@ Social-Media-Site
  backing and be broadcast to others.
 
 
-##### Important Information
+#### Important Information
 * In order to display the feeling of the site's (for the lack of a better word) "activeness", preset data is set to be injected into the user's
   browser LocalStorage upon load. This data is all found under the /db directory and corresponding files.
 * To further display additional "activeness", example logins are provided underneath that can be logged into to view some of the data already set
   specific to the user (e.g. messages, feed, activity);
 
 
-##################
-##Example logins##
-##################
+####Example Profiles
+* Access these profile to check out additional functionality by interacting with preset data.
 
-const logins = [{
+``` javascript
+const logins = [
   username: albertjasa,
-  password: PPrecios00.
+  password: Password.
 },
 {
   username: rosita,
-  password: PPrecios00.
-}]
+  password: Password.
+}]```
