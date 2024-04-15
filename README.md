@@ -1,4 +1,4 @@
-# JS-JQUERY-Social-Media-Site
+Social-Media-Site
 <p float="left">
  <img src="./example_images/InfoPage.PNG" width="300" alt='Landing Page Preview' >
  <img src="./example_images/homePage.PNG" width="300" alt='Home Page Preview' >
