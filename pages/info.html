@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/info.css">
+    <!-- BOOTSTRAP -->
+    <!-- <link rel="stylesheet" href="https://cdn.tlm.cloud/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- SEMANTIC -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Bulletin - Share with the world!</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <header class="info-header d-flex flex-row justify-content-between align-items-center pt-0">
+        <!-- LOGO (main title/link back to homepage ) -->
+        <div>
+          <h1 class="main-title m-0"><a onclick="returnInfo(this, event)" title="go to homepage">Bulletin</a></h1>
+          <h3 class="sub-title">"Share with the world !"</h3>
+        </div>
+        <!-- USER BUTTONS (redirects user to login or sign up) -->
+        <div class="ui buttons">
+          <button id="redirect-signup" class="ui button">Sign Up</button>
+          <button id="redirect-signin" class="ui button">Log In</button>
+        </div>
+
+        <!-- SIGN IN (form for user sign in) -->
+        <form id="signin-form" class="d-none flex-column" method="post">
+          <label for="">Username: <input type="text" name="username"></label>
+          <label for="">Password: <input type="password" name="password"></label>
+          <!-- ERROR (displays form error) -->
+          <p id="note"></p>
+          <!-- SUBMIT (sends in user data to match corresponding user) -->
+          <input id="submit-signin" class="submitBtn" type="submit" value="Sign in">
+          <!-- LINK (redirec to sign up page) -->
+          <input id="redirect-signup" class="submitBtn" type="submit" value="Sign up">
+        </form>
+      </header>
+
+      <!-- IMG BANNER (banner that lies behind the header up top) -->
+      <picture >
+        <source class="img-banner w-100" media="(min-width: 500px)" srcset='../assets/images/infoBanner.jpg'>
+        <img class="img-banner w-100" src="../assets/images/dc15f86ca5e6fe7a83dfe8b665492202.jpeg" alt="Featured Image"/>
+      </picture>
+
+      <!-- MAIN CONTENT () -->
+      <main id="main-body" class="p-0 d-flex">
+      
+        <!-- MISSION STATEMENT (site mission statement banner) -->
+        <section id="main-mission" class="d-flex justify-content-center">
+          <h2 class="align-self-center text-center w-75">
+            <i class="fa fa-project-diagram" ></i> Connect with others, share your experiences, and keep your network closer.</h2>
+        </section>
+
+        <!-- FEATURES (description of site features) -->
+        <section id="main-features" class="d-flex flex-column justify-content-center align-items-center w-75 p-5">
+          <div class="feature d-flex mb-5">
+            <i class="fa fa-2x fa-exchange-alt"> </i>
+            <div class="d-flex flex-column flex-sm-row">
+              <h3 class="features-header ml-2 mb-2 mr-3"> Connect</h3>
+              <p class="features-text text-body">Connect with other users and those in your personal network by following them or allowing them to follow you.</p>
+            </div>
+          </div>
+
+          <div class="feature d-flex mb-5">
+            <i class="fa fa-2x fa-share-alt"></i>
+            <div class="d-flex flex-column flex-sm-row">
+              <h3 class="features-header ml-2 mb-2 mr-3"> Share</h3>
+              <p class="features-text text-body">Interact with your network by share your thoughts and ideas through interactive posts and comments. </p>
+            </div>
+          </div>
+
+          <div class="feature d-flex mb-5">
+            <i class="fa fa-2x fa-comments"></i>
+            <div class="d-flex flex-column flex-sm-row">
+              <h3 class="features-header ml-2 mb-2 mr-3"> Message</h3>
+              <p class="features-text text-body">Keep your network close and enemies closer, by sending personal mesages or starting a group messaging board.</p>
+            </div>
+          </div>
+
+          <div class="feature d-flex mb-5">
+            <i class="fa fa-2x fa-list-alt"></i>
+            <div class="d-flex flex-column flex-sm-row">
+              <h3 class="features-header ml-2 mb-2 mr-3"> Feeds</h3>
+              <p class="features-text text-body">Stay updated on your network's interactivity through different feeds that showcase their interactions with you and others.</p>
+            </div>
+          </div>
+
+          <div class="feature d-flex mb-5">
+            <i class="fa fa-2x fa-users"> </i>
+            <div class="d-flex flex-column flex-sm-row">
+              <h3 class="features-header ml-2 mb-2 mr-3"> Explore</h3>
+              <p class="features-text text-body">Encounter other users and expand your personal network.</p>
+            </div>
+          </div>
+        </section>
+        
+        <!-- <picture >
+          <source class="img-banner w-100" media="(min-width: 500px)" srcset="https://lightbox.tlm.cloud/uploads/medium/04e95e0196cf105c83e135556610fac2.jpeg"/>
+          <img class="img-banner w-100" src="../assets/images/dc15f86ca5e6fe7a83dfe8b665492202.jpeg" alt="Featured Image"/>
+        </picture> -->
+
+        <!-- PAGE FOOTER (additional company information)-->
+        <footer >
+
+          <div class="bg-secondary py-4 row no-gutters">
+            <div class="col-md-1"></div>
+
+            <!-- COMPANY HEADQUARTERS -->
+            <div class="col-md-3 mb-5 mb-md-0">
+              <h2 class="text-light font-weight-light mb-2 text-center">Location</h2>
+              <div class="">
+                <p class="text-light text-center">555 Freedom Lane <br><span> Anytown, CA 99999</span></p>
+              </div>
+            </div>
+
+            <!-- SOCIAL MEDIA LINKS -->
+            <div class="col-md-3 mb-5 mb-md-0 text-center">
+              <h3 class="text-light font-weight-light mb-2">SOCIAL MEDIA</h3>
+              <button class="btn btn-2 btn-outline-light round" type="button">
+                <img class="img-fluid size soc-img" src="../assets/images/logos/ico_facebook.png">
+              </button>
+              <button class="btn btn-2 btn-outline-light round" type="button">
+                <img class="img-fluid size soc-img" src="../assets/images/logos/ico_google.png">
+              </button>
+              <button class="btn btn-2 btn-outline-light round" type="button">
+                <img class="img-fluid size soc-img" src="../assets/images/logos/ico_twitter.png">
+              </button>
+              <button class="btn btn-2 btn-outline-light round" type="button">
+                <img class="img-fluid size soc-img" src="../assets/images/logos/ico_pinterest.png">
+              </button>
+            </div>
+            
+            <!-- COMPANY LOGO -->
+            <div class="col-md-4 mb-5 mb-md-0 text-center align-self-center">
+              <h3 class="text-light font-weight-light mb-2">Bulletin<sup>&trade;</sup> 2021</h3>
+            </div>
+          </div>
+        </footer>
+
+      </main>
+
+
+
+    </div>
+    <script src="../assets/db/convo-records.js"></script>
+    <script src="../assets/db/post-records.js"></script>
+    <script src="../assets/db/records.js"></script>
+    <script src="../assets/js/server.js"></script>
+    <script src="../assets/js/components/general.js"></script>
+    <script src="../assets/js/components/homepage.js"></script>
+    <script src="../assets/js/siteRouter.js"></script>
+    <script src="../assets/js/models/dataModel.js"></script>
+    <script src="../assets/js/models/userModel.js"></script>
+    <script src="../assets/js/models/activityModel.js"></script>
+    <script src="../assets/js/ctrls/formCtrl.js"></script>
+    <script src="../assets/js/ctrls/userCtrl.js"></script>
+
+    <script src="https://cdn.tlm.cloud/semantic-ui/2.4.1/semantic.min.js"
+            integrity="sha384-6urqf2sgCGDfIXcoxTUOVIoQV+jFr/Zuc4O2wCRS6Rnd8w0OJ17C4Oo3PuXu8ZtF"
+            crossorigin="anonymous"></script>
+  </body>
+
+</html>

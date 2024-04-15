@@ -1,0 +1,122 @@
+.wrapper{
+  background-color: unset!important;
+  height: 100vh;
+}
+/* //////////////////////////// */
+/* HEADER */
+/* //////////////////////////// */
+.info-header{
+  height: 19rem;
+  color: white;
+  z-index: 100;
+  /* background-color: lightskyblue; */
+}
+.main-title a{
+  font-size: larger!important;
+}
+.sub-title{
+  color: white!important;
+  text-shadow: 0px 1px 4px #0288d1;
+  font-size: small;
+}
+
+/* //////////////////////////// */
+/* NAVIGATION */
+/* //////////////////////////// */
+#mainNav{
+  margin-top: -2em;
+}
+#mainNav a{
+  background-color: #4fc3f7;
+  box-shadow: none!important;
+  width: 20%!important;
+  height: 7rem;
+}
+.targeted{
+  background-color: white!important;
+}
+#redirect-signup{
+  background-color: #4fc3f7!important;
+}
+#redirect-signin, #submit-signin{
+  background-color: #0288d1!important;
+}
+.button{
+  color: white!important;
+}
+
+/* //////////////////////////// */
+/* IMAGE BANNER */
+/* //////////////////////////// */
+.img-banner{
+  filter: brightness(0.7);
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+/* //////////////////////////// */
+/* IMAGE BANNER */
+/* //////////////////////////// */
+.soc-img{
+  filter: saturate(3);
+}
+
+/* //////////////////////////// */
+/*  MAIN SECTIONS*/
+/* //////////////////////////// */
+#main-mission{
+  background-color: #4fc3f7;
+  color: white;
+  text-shadow: 0px 1px 2px #01579b;
+  box-shadow: inset 0px 0px 6px 5px #29b6f6;
+  height: 11rem;
+}
+#main-mission h2{
+  font-size: revert;
+}
+#main-features{
+  justify-self: center;
+}
+.features-header{
+  color: #0277bd;
+  text-shadow: 0 0 1px #e0e0e0;
+}
+.feature{
+  color: #0277bd;
+}
+
+/* //////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////// */
+@media(min-width: 500px){
+  .info-header{
+    height: 22rem;
+  }
+  .main-title a{
+    font-size: xxx-large!important;
+  }
+  .sub-title{
+    font-size: revert;
+  }
+  #main-mission h2{
+    font-size: x-large;
+  }
+  #main-features{
+    width: 50% !important;
+  }
+
+}
+
+@media(min-width: 1000px){
+  #main-mission h2 {
+    font-size: xx-large;
+  }
+  .features-header{
+    font-size: 1.5rem;
+  }
+  .features-text{
+    font-size: larger;
+  }
+}
+

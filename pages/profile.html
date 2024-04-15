@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/profile.css">
+    <!-- SEMANTIC -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Bulletin - Share with the world!</title>
+  </head>
+
+  <body>
+    <!-- WRAPPER -->
+    <div class="wrapper">
+      <!-- HEADER-->
+      <header>
+        <!-- LOGO (main title/link back to homepage ) -->
+        <h1 class="main-title"><a onclick="returnInfo(this, event)" title="Back to homepage"><i class="fa fa-angle-double-left"></i> Bulletin</a></h1>
+        <!-- USER AVATAR (display corresponding user information and only displayed when user is logged in)-->
+        <div id="user-avatar">
+          <div>
+            <h3>Welcome </h3>
+            <input id="submit-edit-profile" class="submitBtn" type="submit" value="Edit Profile">
+            <a id="my-messages" href="conversations.html"><input class="submitBtn" type="submit" value="Messages"> </a>
+            <input id="submit-signout" class="submitBtn" type="submit" value="Sign out">
+          </div>
+        </div>
+
+        <!-- SIGN IN (form for user sign in) -->
+        <form id="signin-form" method="post">
+          <label for="">Username: <input type="text" name="username"></label>
+          <label for="">Password: <input type="password" name="password"></label>
+          <!-- ERROR (displays form error) -->
+          <p id="note"></p>
+          <!-- SUBMIT (sends in user data to match corresponding user) -->
+          <input id="submit-signin" class="submitBtn" type="submit" value="Sign in">
+          <!-- LINK (redirec to sign up page) -->
+          <input id="redirect-signup" class="submitBtn" type="submit" value="Sign up">
+        </form>
+
+      </header>
+
+      <!-- MAIN BODY -->
+      <main id="main-body">
+        <!-- ------------------------ -->
+        <!-- USER BANNER renders here -->
+        <!-- ------------------------ -->
+
+        <!-- NOTIFICATIONS SECTION (displays all user notifications) -->
+        <section id="notifications-section" class="ui segments">
+          <div class="attached header top ui section-title">Notifications:</div>
+          <!-- CONTAINER FOR ALL notifications -->
+          <section id="all-notifications-container">
+            <!-- ------------------------ -->
+            <!-- NOTIFICATIONS renders here -->
+            <!-- ------------------------ -->
+            <nav class="show-more"></nav>
+          </section>
+        </section>
+
+        <!-- POST SECTION-->
+        <section id="post-section">
+          <!-- POST FORM (new post form) -->
+          <form id="post-form" class="form segment ui" method="post">
+            <textarea class="share-textarea" name="text" cols="30" rows="2" minlength="1" maxlength="120" size="50"
+                      placeholder="Share your day..." spellcheck="true"></textarea>
+            <!-- POST SUBMIT (send in new post data to save) -->
+            <input id="submit-post" class="submitBtn" type="submit" value="Post">
+          </form>
+          <!-- CONTAINER-HOLDS ALL POSTS (user specific posts) -->
+          <section id="all-posts-container">
+            <!-- ------------------------ -->
+            <!-- POSTS renders here -->
+            <!-- ------------------------ -->
+            <nav class="show-more">
+              <!-- ------------------------ -->
+              <!-- PAGINATION renders here -->
+              <!-- ------------------------ -->
+            </nav>
+          </section>
+        </section>
+
+        <!-- EDIT PROFILE SECTION -->
+        <section id="edit-section">
+          <!-- EDIT PROFILE FORM (edit user profile information)-->
+          <form id="edit-profile-form" action="">
+            <label for="">Upload AVI: </label>
+            <input type="file" onchange="previewFile()" name="avatar" id=file-upload"">
+            <div id="img-preview" src="" height="200" alt="Image preview..."></div>
+            <label for="">Name: </label>
+            <input type="text" name="name" id="">
+            <label for="">Bio: </label>
+            <textarea name="bio" placeholder="Talk about yourself..." cols="30" rows="3" minlength="1" maxlength="120"
+                      size="50" placeholder="Share your day..." spellcheck="true"></textarea>
+            <!-- SUBMIT EDIT (sends in edited data to update user) -->
+            <input id="submit-edit" class="submitBtn" type="submit" value="Update">
+          </form>
+        </section>
+
+        <!-- FOLLOWERS SECTION -->
+        <section id="followers-section">
+            <div class="attached header top ui section-title">Followers:</div>
+          <!-- CONTAINER HOLDS ALL FOLLOWERS (user specific followers)-->
+          <section id="all-followers-container">
+            <!-- ------------------------ -->
+            <!-- FOLLOWERS renders here -->
+            <!-- ------------------------ -->
+            <nav class="show-more"> 
+              <!-- ------------------------ -->
+              <!-- PAGINATION renders here -->
+              <!-- ------------------------ -->
+            </nav>
+          </section>
+        </section>
+
+        <!-- FOLLOWING PROFILE SECTION -->
+        <section id="following-section">
+            <div class="attached header top ui section-title">Following: </div>
+          <!-- CONTAINER HOLDS ALL FOLLOWING (user specific following)-->
+          <section id="all-following-container">
+            <!-- ------------------------ -->
+            <!-- FOLLOWING renders here -->
+            <!-- ------------------------ -->
+            <nav class="show-more">
+              <!-- ------------------------ -->
+              <!-- PAGINATION renders here -->
+              <!-- ------------------------ -->
+            </nav>
+          </section>
+        </section>
+
+      </main>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha512-QkuqGuFAgaPp3RTyTyJZnB1IuwbVAqpVGN58UJ93pwZel7NZ8wJOGmpO1zPxZGehX+0pc9/dpNG9QdL52aI4Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/db/convo-records.js"></script>
+    <script src="../assets/db/post-records.js"></script>
+    <script src="../assets/db/records.js"></script>
+    <script src="../assets/js/server.js"></script>
+    <script src="../assets/js/components/general.js"></script>
+    <script src="../assets/js/components/homepage.js"></script>
+    <script src="../assets/js/components/profile.js"></script>
+    <script src="../assets/js/siteRouter.js"></script>
+    <script src="../assets/js/models/dataModel.js"></script>
+    <script src="../assets/js/models/userModel.js"></script>
+    <script src="../assets/js/models/postModel.js"></script>
+    <script src="../assets/js/models/activityModel.js"></script>
+    <script src="../assets/js/ctrls/formCtrl.js"></script>
+    <script src="../assets/js/ctrls/postCtrl.js"></script>
+    <script src="../assets/js/ctrls/userCtrl.js"></script>
+    <script src="../assets/js/ctrls/modalCtrl.js"></script>
+  </body>
+
+</html>

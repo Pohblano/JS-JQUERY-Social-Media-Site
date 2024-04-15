@@ -1,0 +1,125 @@
+/* //////////////////////////// */
+/* WRAPPER */
+/* //////////////////////////// */
+.main-wrapper{
+ display: flex;
+ justify-content: center;
+ gap: 1rem;
+ place-items: flex-start;
+ flex-direction: row-reverse;
+}
+.follow-wrapper{
+  display: grid;
+  width: 24rem;
+  justify-items: center;
+}
+/* //////////////////////////// */
+/* MODAL AND FORM */
+/* //////////////////////////// */
+.modal{
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid #01579B;
+}
+.modal-content{
+  display: grid;
+  justify-items: center;
+}
+#img-preview{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  right: 22px;
+  top: 38px;
+}
+
+/* //////////////////////////// */
+/* USER-BANNER  */
+/* //////////////////////////// */
+.user-follow-info{
+  display: flex;
+  column-gap: 10px;
+  margin-top: 6px;
+  align-self: center;
+}
+.user-bio{
+  text-align: center;
+  width: 20rem;
+  align-self: center;
+  margin: 1rem 0;
+}
+.user-banner{
+  margin: 2em 0em;
+}
+.user-banner-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.user-follow-info > a{
+  padding: 5px;
+  font-size: 13px;
+  color: #01579B;
+}
+.profileBtn{
+  background-color: #B3E5FC!important;
+  color: #01579B!important;
+  font-size: 12px!important;
+}
+.follow-btn{
+  width: 7rem!important;
+}
+.user-card-small{
+  padding: .5em 0rem!important;
+}
+/* //////////////////////////// */
+/* EDIT_SECTION */
+/* //////////////////////////// */
+#edit-profile-form{
+  display: grid;
+  grid-gap: 5px;
+  color: #01579B;
+}
+#edit-profile-form input{
+  margin-bottom: 20px;
+  border: 1px solid;
+}
+#edit-profile-form input[type="file"]{
+  width: 80%;
+}
+
+/* //////////////////////////// */
+/* FOLLOWERS/FOLLOWING SECTION */
+/* //////////////////////////// */
+#followers-section, #following-section{
+  display: none;
+  width: 21rem;
+  justify-self: center;
+  padding: 0em 2em 2em 2em;
+}
+.section-title{
+  color: #01579B!important;
+  margin-bottom: 1rem!important;
+}
+
+/* //////////////////////////// */
+/* NOTIFICATION SECTION */
+/* //////////////////////////// */
+#notifications-section{
+  display: none;
+  width: 24rem;
+  justify-self: center;
+}
+.notification-content{
+  margin: auto 0;
+  text-indent: 5px;
+}
+.notification-container button{
+  border: none;
+  background-color: white;
+  text-indent: 1em;
+}
+

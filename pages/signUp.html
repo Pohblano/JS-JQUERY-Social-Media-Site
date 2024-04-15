@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/signup.css">
+    <!-- SEMANTIC -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Bulletin - Share with the world!</title>
+  </head>
+
+  <body>
+    <!-- WRAPPER -->
+    <main class="wrapper">
+      <!-- SIGN UP FORM (new user sign up )-->
+      <form id="signup-form" class="ui form" method="post">
+        <h1>SIGN UP</h1>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="terminal icon"></i>
+            <input type="text" name="name" placeholder="Full Name">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="key icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="confirm" placeholder="Confirm Password">
+          </div>
+          <div>
+              Password should be more than 8chars, 1 capital, 1 num,1 special char 
+            </div>
+        </div>
+        <!-- ERROR (display form error message) -->
+        <p id="note"></p>
+        <!-- SUBMIT (send in form data to save) -->
+        <input id="submit-signup" class="ui submit button" type="submit" value="Sign Up">
+        <a href="info.html">go back</a>
+      </form>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha512-QkuqGuFAgaPp3RTyTyJZnB1IuwbVAqpVGN58UJ93pwZel7NZ8wJOGmpO1zPxZGehX+0pc9/dpNG9QdL52aI4Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/server.js"></script>
+    <script src="../assets/js/siteRouter.js"></script>
+    <script src="../assets/js/models/dataModel.js"></script>
+    <script src="../assets/js/models/userModel.js"></script>
+    <script src="../assets/js/models/postModel.js"></script>
+    <script src="../assets/js/models/activityModel.js"></script>
+    <script src="../assets/js/ctrls/formCtrl.js"></script>
+    <script src="../assets/js/ctrls/userCtrl.js"></script>
+  </body>
+
+</html>

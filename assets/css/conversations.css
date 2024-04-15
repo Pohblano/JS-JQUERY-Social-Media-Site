@@ -1,0 +1,108 @@
+/* //////////////////////////// */
+/* GENERAL DEAFULTS & OVERRIDES */
+/* //////////////////////////// */
+*{
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+}
+body{
+  height: 100%;
+}
+.ui.vertical.menu .dropdown.item .menu {
+  left: unset!important;
+  min-width: unset!important;
+}
+.ui.vertical.menu .dropdown.item:not(.upward) .menu {
+  top: 41px!important;
+}
+
+/* //////////////////////////// */
+/* HEADER */
+/* //////////////////////////// */
+header{
+  background-color: #4fc3f7;
+}
+
+/* //////////////////////////// */
+/* CONVO SECTION */
+/* //////////////////////////// */
+.convo-window{
+  background-color: white;
+  height: 100%;
+}
+.convo-wrapper{
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+/* //////////////////////////// */
+/* CONVO LIST SECTION */
+/* //////////////////////////// */
+#list-section{
+  height: fit-content!important;
+  margin: 0!important;
+}
+.list-menu{
+  width: 100%;
+}
+/* //////////////////////////// */
+/* CONVO SECTION */
+/* //////////////////////////// */
+#convo-section{
+  flex: 1;
+  margin: 0!important;
+  height: 100%;
+    justify-content: space-between;
+}
+.anim-avi{
+  margin: 0 -6px;
+}
+.anim-avi:hover{
+  margin: 0 28px 0 11px;
+}
+.search-recipient{
+  display: none;
+}
+
+/* //////////////////////////// */
+/* MESSAGES SECTION */
+/* //////////////////////////// */
+#all-messages-container{
+  height: 100%;
+  overflow: auto;
+  
+}
+.msg-wrapper{
+  max-width: 50%;
+}
+.msg-content{
+  width: fit-content;
+  border-radius: 12px;
+  color: white;
+  background-color: #81d4fa; 
+}
+.msg-details{
+  text-indent: 1rem;
+}
+.msg-receiver{
+  background-color: #eeeeee;
+  color: #37474f;
+}
+
+/* //////////////////////////// */
+/* MODAL */
+/* //////////////////////////// */
+#select-followers{
+  gap:1rem;
+}
+.list-item{
+  width: 12rem!important;
+}
+
+
+@media(min-width: 560px){
+  .convo-window{
+    height: unset;
+  }
+}
+
