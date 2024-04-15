@@ -1,4 +1,13 @@
-# JS-JQUERY-Social-Media-Site
+Social-Media-Site
+<p float="left">
+ <img src="./example_images/InfoPage.PNG" width="300" alt='Landing Page Preview' >
+ <img src="./example_images/homePage.PNG" width="300" alt='Home Page Preview' >
+<!--  <img src="./example_images/homePageAllUsers.PNG" width="275" alt='Display All Users Preview' > -->
+<!--   <img src="./example_images/ProfilePage.PNG" width="275" alt='User Profile Page Preview' > -->
+  <img src="./example_images/Messages.PNG" width="300" alt='Messages Page Preview' >
+</p>
+
+
 ## Capstone Project (Bulletin - "Share with the world!")
 * Bulletin is a social media site dedicated to connecting users around the world. It allows users to connect with each other through
  posts, comments, messages, likes, and follows. It's a site that can serve as a template for a LAN (Local Area Network) setting like say a
