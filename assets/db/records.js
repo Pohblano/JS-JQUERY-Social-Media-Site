@@ -7,7 +7,7 @@ const data_records= {
     ],
     "name": "Alberto Martinez-Jara",
     "username": "albertjasa",
-    "password": "PPrecios00.",
+    "password": "Password.",
     "posts": [
       "CC80C706-54AB-4807-8F2F-FA7822D76482",
       "0244E245-2E80-494C-92F4-DDD7F731460F",
@@ -987,7 +987,7 @@ const data_records= {
     ],
     "name": "Rosa Reyes",
     "username": "rosita",
-    "password": "PPrecios00.",
+    "password": "Password.",
     "posts": [
       "7ECF83C4-6EA3-4054-A2CC-96FF64F96275"
     ],
